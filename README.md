@@ -3,9 +3,9 @@
 Amazon Bedrock is a **fully managed** service that offers **API access** to a choice of high-performing **foundation models** (FMs) from leading AI companies
 including AI21 Labs, Anthropic, Cohere, Meta, Stability AI, and Amazon, along with a broad set of capabilities that you need to build generative AI applications, **simplifying** development while maintaining **privacy** and **security**. 
 
-This demo provides a basic introduction to Amazon Bedrock by allowing you to interact with FMs using Amazon Bedrock. This demo application is intended for quick deployment on your workstation to allow you explore Amazon Bedrock easily.
+This demo provides a basic introduction to some GenAI use cases, by allowing you to interact with FMs using Amazon Bedrock. This demo application is intended for **quick deployment** on your workstation to allow you explore Amazon Bedrock easily.
 
-Watch a video of the demo!
+Watch a video of the demo below (the **Chrome** browser is recommended)! 
 
 
 https://github.com/aws-samples/amazon-bedrock-intro-demo/assets/39437216/0d299407-cf3c-4032-9c5e-7be6dab9f80a
@@ -13,31 +13,41 @@ https://github.com/aws-samples/amazon-bedrock-intro-demo/assets/39437216/0d29940
 
 **NOTE:** Refer to the [Amazon Bedrock pricing](https://aws.amazon.com/bedrock/pricing/) to understand the costs incurred with using Amazon Bedrock.
 
-#### Prerequisites
+### Prerequisites
 - AWS account (sandbox account recommended)
-- IAM user or role with Administrator access or the [required permissions](https://docs.aws.amazon.com/bedrock/latest/userguide/security_iam_id-based-policy-examples.html) to access Amazon Bedrock and its FMs. Use this principal's credentials in your [default AWS profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html) (AWS_PROFILE).
+- IAM user or role with Administrator access or the [required permissions](https://docs.aws.amazon.com/bedrock/latest/userguide/security_iam_id-based-policy-examples.html) to access Amazon Bedrock and its FMs. Configure this principal's credentials in your environment's [default AWS profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html) (AWS_PROFILE).
 - Python 3.9+
 - Linux (preferred)
 - Internet access
 
-#### Getting started
+### Getting started
 Implement the following steps to start using the demo application:
 
-**STEP 1:** Clone the GitHub repository
+**STEP 1:** Create a Python virtual environment 
 
 ```
-TBD
+python -m venv demo
+cd demo
+source bin/activate
 ```
 
-**STEP 2:** Create a Python virtual environment and install required python modules
+**STEP 2:** Clone the git repository
 
 ```
-TBD
+git clone https://github.com/aws-samples/amazon-bedrock-intro-demo.git
 ```
 
-**STEP 2:** Run the Streamlit application and access the application in your browser
+Alternatively, download the code and extract the amazon-bedrock-intro-demo directory.
+
+**STEP 3:** Install the required python modules 
 
 ```
-TBD
+cd amazon-bedrock-intro-demo
+pip install -r requirements.txt
 ```
 
+**STEP 4:** Launch the Streamlit application and access the displayed URL
+
+```
+streamlit run main.py
+```
