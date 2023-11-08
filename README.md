@@ -5,6 +5,10 @@ including AI21 Labs, Anthropic, Cohere, Meta, Stability AI, and Amazon, along wi
 
 This demo provides a basic introduction to Amazon Bedrock by allowing you to interact with FMs using Amazon Bedrock. This demo application is intended for quick deployment on your workstation to allow you explore Amazon Bedrock easily.
 
+Watch a video of the demo!
+
+https://github.com/aws-samples/amazon-bedrock-intro-demo/assets/39437216/70c89a44-ca81-4411-8669-f80e5c466303
+
 
 **NOTE:** Refer to the [Amazon Bedrock pricing](https://aws.amazon.com/bedrock/pricing/) to understand the costs incurred with using Amazon Bedrock.
 
