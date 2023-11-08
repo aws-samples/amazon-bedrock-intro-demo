@@ -7,7 +7,8 @@ This demo provides a basic introduction to Amazon Bedrock by allowing you to int
 
 Watch a video of the demo!
 
-https://github.com/aws-samples/amazon-bedrock-intro-demo/assets/39437216/70c89a44-ca81-4411-8669-f80e5c466303
+
+https://github.com/aws-samples/amazon-bedrock-intro-demo/assets/39437216/0d299407-cf3c-4032-9c5e-7be6dab9f80a
 
 
 **NOTE:** Refer to the [Amazon Bedrock pricing](https://aws.amazon.com/bedrock/pricing/) to understand the costs incurred with using Amazon Bedrock.
