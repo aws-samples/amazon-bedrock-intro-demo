@@ -4,42 +4,42 @@ name = "Home"
 icon = "🏠"
 
 [[pages]]
-path = "qa_fm.py"
+path = "scripts/qa_fm.py"
 name = "QA - Single FM 📙"
 icon = ":question:"
 
 [[pages]]
-path = "qa_fm_comparison.py"
+path = "scripts/qa_fm_comparison.py"
 name = "QA - FM Comparison 📚"
 icon = ":question:"
 
 [[pages]]
-path = "chat_fm.py"
+path = "scripts/chat_fm.py"
 name = "Chat - FMs"
 icon = ":robot_face:"
 
 [[pages]]
-path = "text_search.py"
+path = "scripts/text_search.py"
 name = "Text Search"
 icon = ":mag_right:"
 
 [[pages]]
-path = "code_translation.py"
+path = "scripts/code_translation.py"
 name = "Code Translation"
 icon = ":abacus:"
 
 [[pages]]
-path = "rag_documents.py"
+path = "scripts/rag_documents.py"
 name = "RAG - Document(s)"
 icon = ":file_folder:"
 
 [[pages]]
-path = "rag_www.py"
+path = "scripts/rag_www.py"
 name = "RAG - WWW"
 icon = ":globe_with_meridians:"
 
 
 [[pages]]
-path = "solutions_overview.py"
+path = "scripts/solutions_overview.py"
 name = "Solutions Overview"
 icon = ":triangular_ruler:"
