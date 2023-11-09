@@ -1,6 +1,6 @@
 boto3==1.28.61
 faiss-cpu==1.7.4
-langchain==0.0.311
+langchain==0.0.325
 st-pages==0.4.4
 streamlit==1.27.2
 pypdf==3.15.2
