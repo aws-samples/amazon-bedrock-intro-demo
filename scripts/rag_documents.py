@@ -197,11 +197,10 @@ def main():
                         st.session_state.faiss_vector_db = embeddings_faiss(pdf_chunks,VECTOR_STORE_DIR, bedrock_embeddings)
                     elif len(os.listdir(INPUT_DIR)) > 0 and len(os.listdir(VECTOR_STORE_DIR)) > 0:
                         st.session_state.faiss_vector_db = embeddings_faiss([],VECTOR_STORE_DIR, bedrock_embeddings)
-                if st.session_state.faiss_vector_db is not None:
-                    with rag_disabled_response.container():
-                        st.markdown(f"<div id='divshell' style='background-color: #fdf1f2;'><p style='text-align: center;font-weight: bold;'>Without RAG ( {rag_fm} )</p>{ask_fm_rag_off(rag_fm_prompt, rag_fm)}</div>", unsafe_allow_html=True)
-                    with rag_enabled_response.container():
-                        st.markdown(f"<div id='divshell' style='background-color: #f1fdf1;'><p style='text-align: center;font-weight: bold;'>With RAG ( {rag_fm} )</p>{ask_fm_rag_on(rag_fm_prompt, rag_fm, st.session_state.faiss_vector_db)}</div>", unsafe_allow_html=True)
+                        with rag_disabled_response.container():
+                            st.markdown(f"<div id='divshell' style='background-color: #fdf1f2;'><p style='text-align: center;font-weight: bold;'>Without RAG ( {rag_fm} )</p>{ask_fm_rag_off(rag_fm_prompt, rag_fm)}</div>", unsafe_allow_html=True)
+                        with rag_enabled_response.container():
+                            st.markdown(f"<div id='divshell' style='background-color: #f1fdf1;'><p style='text-align: center;font-weight: bold;'>With RAG ( {rag_fm} )</p>{ask_fm_rag_on(rag_fm_prompt, rag_fm, st.session_state.faiss_vector_db)}</div>", unsafe_allow_html=True)
 
 
 # Main  
