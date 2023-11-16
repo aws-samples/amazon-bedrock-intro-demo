@@ -15,7 +15,7 @@ https://github.com/aws-samples/amazon-bedrock-intro-demo/assets/39437216/af12bdf
 
 ### Prerequisites
 - AWS account (sandbox account recommended)
-- IAM user or role with Administrator access or the [required permissions](https://docs.aws.amazon.com/bedrock/latest/userguide/security_iam_id-based-policy-examples.html) to access Amazon Bedrock and its FMs. Configure this principal's credentials in your environment's [default AWS profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html) (AWS_PROFILE).
+- IAM user or role with Administrator access or the [required permissions](https://docs.aws.amazon.com/bedrock/latest/userguide/security_iam_id-based-policy-examples.html) to access Amazon Bedrock and its FMs. Configure this principal's credentials in your environment's [default AWS profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html) (AWS_PROFILE). Also, ensure that you have enabled [Model access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html) on Amazon Bedrock.
 - Python 3.9+
 - Linux (preferred)
 - Internet access
@@ -23,7 +23,7 @@ https://github.com/aws-samples/amazon-bedrock-intro-demo/assets/39437216/af12bdf
 ### Getting started
 Implement the following steps to start using the demo application:
 
-**STEP 1:** Create a Python virtual environment 
+**STEP 1:** Create a Python virtual environment. This is *optional* depending on your environment. 
 
 ```
 python -m venv demo
