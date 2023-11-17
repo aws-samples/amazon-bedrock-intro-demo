@@ -38,8 +38,12 @@ path = "scripts/rag_www.py"
 name = "RAG - WWW"
 icon = ":globe_with_meridians:"
 
-
 [[pages]]
 path = "scripts/solutions_overview.py"
 name = "Solutions Overview"
 icon = ":triangular_ruler:"
+
+[[pages]]
+path = "scripts/partyrock.py"
+name = "PartyRock"
+icon = ":minidisc:"
