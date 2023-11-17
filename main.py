@@ -31,5 +31,6 @@ st.markdown(
     ### Want to learn more?
     - Check out [Amazon Bedrock](https://aws.amazon.com/bedrock/)
     - Explore [sample notebooks](https://github.com/aws-samples/amazon-bedrock-workshop)
+    - Have fun with [PartyRock](PartyRock)
 """
 )
