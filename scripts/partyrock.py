@@ -22,20 +22,8 @@ st.markdown(
 """
 **[PartyRock](https://partyrock.aws/)** is an Amazon Bedrock playground for building and sharing generative AI apps as part of an *educational* and *fun* experience! PartyRock provides an easy, **no-code**, interactive UI for getting introduced to the power of foundation models with Amazon Bedrock. **Anyone** (no AWS account required) can access PartyRock with free trial use for a limited time, by creating a profile using a social login from amazon.com, Apple, or Google. 
     
-Check out the video below of some PartyRock apps.
+Check out these videos below of some PartyRock apps.
 
-""")
-video_file = open('video/partyrock_myapps.mp4', 'rb')
-video_bytes = video_file.read()
-st.video(video_bytes)
-st.markdown(
-"""   
-### PartyRock App URLs
-You may click the following URLs to access the PartyRock apps shown in the above video and remix.
-
--  [Foundation model comparison](https://partyrock.aws/u/cybergavin/Qx0z-VlrU/Foundation-model-comparison)
--  [Code Translator](https://partyrock.aws/u/cybergavin/M1wTop3Zz/Code-Translator)
--  [School Quiz Generator](https://partyrock.aws/u/cybergavin/zmjxFS4k3/School-Quiz-Generator)
--  [Guitar Tablature](https://partyrock.aws/u/cybergavin/LXryWAB2K/Guitar-Tablature)
--  [CyberG Chat](https://partyrock.aws/u/cybergavin/P6Rtls9bb/CyberG-Chat)
+-  [Code Translator](https://www.youtube.com/watch?v=U8njepI6Sj0)
+-  [School Quiz Generator](https://www.youtube.com/watch?v=iEsxdsET7nI)
 """)

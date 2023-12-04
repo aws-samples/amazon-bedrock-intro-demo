@@ -34,6 +34,11 @@ name = "RAG - Document(s)"
 icon = ":file_folder:"
 
 [[pages]]
+path = "scripts/rag_bedrock_kb.py"
+name = "RAG - Bedrock KB"
+icon = ":bucket:"
+
+[[pages]]
 path = "scripts/rag_www.py"
 name = "RAG - WWW"
 icon = ":globe_with_meridians:"

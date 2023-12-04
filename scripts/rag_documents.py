@@ -23,7 +23,6 @@ if not os.path.exists(VECTOR_STORE_DIR):
 
 
 # Get text-to-text FMs
-fm_vendors = ['ai21', 'anthropic', 'cohere']
 t2t_fms = get_t2t_fms(fm_vendors)
 
 

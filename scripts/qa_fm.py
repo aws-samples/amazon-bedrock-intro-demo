@@ -2,7 +2,6 @@ import streamlit as st
 from cg_utils import *
 
 # Get text-to-text FMs
-fm_vendors = ['ai21', 'anthropic', 'cohere']
 t2t_fms = get_t2t_fms(fm_vendors)
 
 

@@ -3,7 +3,6 @@ from cg_utils import *
 
 
 # Get text-to-text FMs
-fm_vendors = ['cohere', 'anthropic']
 t2t_fms = get_t2t_fms(fm_vendors)
 # Programming languages for code translation
 pr_langs = ["C++", "Java", "JavaScript", "Python", "COBOL", "Go"]

@@ -3,6 +3,8 @@ import json
 from langchain.llms.bedrock import Bedrock
 from langchain.embeddings import BedrockEmbeddings
 
+# List FM vendors
+fm_vendors = ['ai21', 'anthropic', 'cohere', 'meta', 'amazon']
 
 # Create bedrock boto3 clients
 bedrock = boto3.client(service_name='bedrock')
@@ -10,13 +12,12 @@ bedrock_runtime = boto3.client(service_name='bedrock-runtime')
 # Create bedrock_embeddings instance using LangChain
 bedrock_embeddings = BedrockEmbeddings(client=bedrock_runtime)
 
-
 def get_t2t_fms(vendors:list) -> list:
-    """Generate a list of text-to-text FMs available with Bedrock, for specific vendors"""
+    """Generate a list of text-to-text Bedrock FMs with On-Demand inference, for specific vendors"""
     all_fms = bedrock.list_foundation_models()['modelSummaries']
     t2t_fms = []
     for fm in all_fms:
-        if fm['inputModalities'] == ['TEXT'] and fm['outputModalities'] == ['TEXT']:
+        if fm['inputModalities'] == ['TEXT'] and fm['outputModalities'] == ['TEXT'] and fm['inferenceTypesSupported'] == ['ON_DEMAND']:
             if any(e in fm['modelId'] for e in vendors):
                 t2t_fms.append(fm['modelId'])
     return t2t_fms
@@ -36,6 +37,16 @@ def ask_fm(modelid:str, prompt:str) -> str:
         body = json.dumps({
             "prompt": prompt,
             "max_tokens": 2048})
+    elif "meta" in modelid:
+        body = json.dumps({
+            "prompt": prompt,
+            "max_gen_len": 2048})
+    elif "amazon" in modelid:
+        body = json.dumps({
+            "inputText": prompt,
+            "textGenerationConfig": {
+                "maxTokenCount": 2048
+            }})
     accept = "application/json"
     contentType = "application/json"
     # Invoke FM
@@ -50,10 +61,14 @@ def ask_fm(modelid:str, prompt:str) -> str:
         return response_body["completion"]
     elif "cohere" in modelid:
         return response_body["generations"][0]["text"]
+    elif "meta" in modelid:
+        return response_body["generation"]
+    elif "amazon" in modelid:
+        return response_body["results"][0]["outputText"]
     
 
 def get_fm(modelid:str):
-    """Return requested Bedrock FM (LangChain) with max tokens in output"""
+    """Return requested Bedrock FM (LangChain) with 2048 max tokens in output"""
     if "ai21.j2" in modelid:
         inference_parameters = {
             "maxTokens": 2048
@@ -67,4 +82,12 @@ def get_fm(modelid:str):
         inference_parameters = {
             "max_tokens": 2048
         }
+    elif "meta" in modelid:
+        inference_parameters = {
+            "max_gen_len": 2048
+        }
+    elif "amazon" in modelid:
+        inference_parameters = {
+            "maxTokenCount": 2048
+        }                
     return Bedrock(model_id=modelid, client=bedrock_runtime, model_kwargs=inference_parameters)

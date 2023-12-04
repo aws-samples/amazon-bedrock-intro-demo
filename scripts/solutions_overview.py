@@ -15,7 +15,7 @@ css = '''
 st.write(css, unsafe_allow_html=True)
 st.header("Demo Overview")
 st.write("This page provides an overview of the solutions used by the demos listed in the sidebar.")
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Question Answering", "Chatbot", "Text Search", "Code Translation", "RAG - Documents", "RAG - Web Search"])
+tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(["Question Answering", "Chatbot", "Text Search", "Code Translation", "RAG - Documents", "RAG - Bedrock Knowledge Base", "RAG - Web Search"])
 with tab1:
     # FM QA using Amazon Bedrock
     st.subheader("Question Answering with Amazon Bedrock FMs")
@@ -82,6 +82,19 @@ with tab5:
     """)
     st.image('img/rag_documents.png', caption="Retrieval Augmented Generation - Text Documents", width=650)
 with tab6:
+    # RAG - Bedrock Knowledge Base
+    st.subheader("Retrieval Augmented Generation (RAG) - Amazon Bedrock Knowledge Base")
+    st.markdown("""
+    This demo allows you to retrieve information from documents using the Amazon Bedrock Knowledge Base feature.
+    Amazon Bedrock Knowledge Base is a **fully managed RAG** workflow for your GenAI applications. 
+    This demo solution uses:
+    - Streamlit for the web interface
+    - AWS SDK for python (Boto3) for API access to FMs via API calls to Amazon Bedrock
+    - A provisioned Amazon Bedrock Knowledge Base
+                
+    """)
+    st.image('img/rag_bedrock_kb.png', caption="Retrieval Augmented Generation - Amazon Bedrock Knowledge Base", width=650) 
+with tab7:
     # RAG - WWW
     st.subheader("Retrieval Augmented Generation (RAG) - Web Search")
     st.markdown("""
@@ -93,3 +106,4 @@ with tab6:
                 
     """)
     st.image('img/rag_www.png', caption="Retrieval Augmented Generation - WWW", width=650)
+   
