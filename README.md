@@ -8,7 +8,7 @@ This demo provides a basic introduction to some GenAI use cases, by allowing you
 Watch a video of the demo below (the **Chrome** browser is recommended)! 
 
 
-https://github.com/aws-samples/amazon-bedrock-intro-demo/assets/39437216/dce78d42-9f71-43be-80b2-6bfa8933fea9
+https://github.com/aws-samples/amazon-bedrock-intro-demo/assets/39437216/167892ae-bcff-4b74-bc5a-5cd8307d64a7
 
 
 **NOTE:** Refer to the [Amazon Bedrock pricing](https://aws.amazon.com/bedrock/pricing/) to understand the costs incurred with using Amazon Bedrock.
