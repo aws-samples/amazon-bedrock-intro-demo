@@ -51,3 +51,5 @@ pip install -r requirements.txt
 ```
 streamlit run main.py
 ```
+
+**NOTE:** This demo is not maintained. For any updates, go [here](https://github.com/cybergavin/amazon-bedrock-intro-demo)
