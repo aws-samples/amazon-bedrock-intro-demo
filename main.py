@@ -32,5 +32,8 @@ st.markdown(
     - Check out [Amazon Bedrock](https://aws.amazon.com/bedrock/)
     - Explore [sample notebooks](https://github.com/aws-samples/amazon-bedrock-workshop)
     - Have fun with [PartyRock](PartyRock)
+
+    ### NOTE:
+    This demo is not maintained. For any updates, go [here](https://github.com/cybergavin/amazon-bedrock-intro-demo)
 """
 )
